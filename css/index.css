@@ -1,0 +1,90 @@
+body{
+  background: rgba(241, 214, 170, 0.71);
+}
+
+/*************************************************/
+/* Landing Page Section */
+.main{
+  position: relative;
+  background: rgba(241, 214, 170, 0.71);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.layer1{
+  position: absolute;
+  width: 100%;
+  padding-top: 5%;
+  z-index: 1;
+}
+
+.logo{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.catchphrase{
+  font-size: 35px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(65, 124, 136, 1);
+}
+
+.monkey{
+  margin-top: -25%;
+}
+
+.surfdude{
+  align-items: flex-end;
+  position: relative;
+  display: flex;
+}
+
+/*************************************************/
+/* CSS Only Animations */
+
+.hover-vertically {
+  display: inline-block;
+  position: relative;
+  animation: hover-vertically-animation 2s infinite;
+}
+
+@keyframes hover-vertically-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*************************************************/
+/* Scroll Effects */
+
+.fade-in-from-bottom {
+  opacity: 0; /* Initially hide the element */
+  transform: translateY(50px); /* Move the element 50px down */
+  transition: opacity 1s, transform 1s; /* Add transitions for opacity and transform properties */
+}
+.fade-in-from-bottom.show {
+  opacity: 1; /* Show the element */
+  transform: translateY(0); /* Move the element to its original position */
+}
+
+.fade-in-pop-center {
+  opacity: 0; /* Initially hide the element */
+  transform: scale(0.8); /* Initially scale down the element */
+  transition: opacity 1s, transform 1s; /* Add transitions for opacity and transform properties */
+}
+.fade-in-pop-center.show {
+  opacity: 1; /* Show the element */
+  transform: scale(1); /* Scale the element back to its original size */
+}
